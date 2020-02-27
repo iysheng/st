@@ -10,7 +10,7 @@ static char *font = "CascadiaCode:pixelsize=16:antialias=true:autohint=true";
 static char *font = "Iosevka SS08:pixelsize=16:antialias=true:autohint=true";
 static char *font = "JetBrainsMono Nerd Font:pixelsize=16:antialias=true:autohint=true";
 #else
-static char *font = "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true";
+static char *font = "OperatorMono Nerd Font,Operator Mono Book:style=Book,Regular:pixelsize=18:antialias=true:autohint=true";
 #endif
 static int borderpx = 2;
 
