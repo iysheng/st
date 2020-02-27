@@ -8,8 +8,9 @@
 #if 0
 static char *font = "CascadiaCode:pixelsize=16:antialias=true:autohint=true";
 static char *font = "Iosevka SS08:pixelsize=16:antialias=true:autohint=true";
-#else
 static char *font = "JetBrainsMono Nerd Font:pixelsize=16:antialias=true:autohint=true";
+#else
+static char *font = "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true";
 #endif
 static int borderpx = 2;
 
@@ -93,31 +94,31 @@ float alphaUnfocussed = 0.8; //< alpha value used when the focus is lost
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  /* 8 normal colors */
-	"#3b4252", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#88c0d0", /* cyan    */
-	"#e5e9f0", /* white   */
-
-  /* 8 bright colors */
-	"#4c566a", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#8fbcbb", /* cyan    */
-	"#eceff4", /* white   */
-
+	"#5c6370", /* black   */
+	"#e06c75", /* red     */
+	"#98c379", /* green   */
+	"#e5c07b", /* yellow  */
+	"#61afef", /* blue    */
+	"#c678dd", /* magenta */
+	"#56b6c2", /* cyan    */
+	"#abb2bf", /* white   */
+ 
+ 	/* 8 bright colors */
+	"#4b5263", /* black   */
+	"#be5046", /* red     */
+	"#98c379", /* green   */
+	"#d19a66", /* yellow  */
+	"#61afef", /* blue    */
+	"#c678dd", /* magenta */
+	"#56b6c2", /* cyan    */
+	"#3e4452", /* white   */
+ 
  	[255] = 0,
-  /* special colors */
-	"#2e3440", /* background */
-	"#d8dee9", /* foreground */};
-
+ 
+ 	/* more colors can be added after 255 to use with DefaultXX */
+	"#282c34", /* background */
+	"#abb2bf", /* foreground */
+ };
 
 /*
  * Default colors (colorname index)
@@ -126,7 +127,7 @@ static const char *colorname[] = {
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultrcs = 256;
 /*
  * Default shape of cursor
  * 2: Block ("█")
