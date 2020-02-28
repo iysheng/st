@@ -6,12 +6,15 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 #if 0
-static char *font = "CascadiaCode:pixelsize=16:antialias=true:autohint=true";
-static char *font = "Iosevka SS08:pixelsize=16:antialias=true:autohint=true";
-static char *font = "JetBrainsMono Nerd Font:pixelsize=16:antialias=true:autohint=true";
+static char *font = "CascadiaCode:size=12:antialias=true:autohint=true";
+static char *font = "Iosevka SS08:size=12:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:size=12:antialias=true:autohint=true";
 #else
-static char *font = "OperatorMono Nerd Font,Operator Mono Book:style=Book,Regular:pixelsize=18:antialias=true:autohint=true";
+static char *font = "OperatorMono Nerd Font,Operator Mono Book:style=Book,Regular:size=12:antialias=true:autohint=true";
 #endif
+/* extra string for italic style */
+const char *extra_italic_style = "Book Italic";
+const int extra_italic_hight_style = 53;
 static int borderpx = 2;
 
 /*
@@ -102,7 +105,7 @@ static const char *colorname[] = {
 	"#c678dd", /* magenta */
 	"#56b6c2", /* cyan    */
 	"#abb2bf", /* white   */
- 
+
  	/* 8 bright colors */
 	"#4b5263", /* black   */
 	"#be5046", /* red     */
@@ -112,9 +115,9 @@ static const char *colorname[] = {
 	"#c678dd", /* magenta */
 	"#56b6c2", /* cyan    */
 	"#3e4452", /* white   */
- 
+
  	[255] = 0,
- 
+
  	/* more colors can be added after 255 to use with DefaultXX */
 	"#282c34", /* background */
 	"#abb2bf", /* foreground */

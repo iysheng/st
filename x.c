@@ -252,6 +252,9 @@ static bool focused = true;
 
 static int oldbutton = 3; /* button event on startup: 3 = release */
 
+extern const char *extra_italic_style;
+extern const int extra_italic_hight_style;
+
 void
 clipcopy(const Arg *dummy)
 {
@@ -1003,9 +1006,19 @@ xloadfonts(char *fontstr, double fontsize)
 
 	FcPatternDel(pattern, FC_SLANT);
 	FcPatternAddInteger(pattern, FC_SLANT, FC_SLANT_ITALIC);
+	if (extra_italic_style)
+	{
+		FcPatternDel(pattern, FC_STYLE);
+		FcPatternAddString(pattern, FC_STYLE, extra_italic_style);
+		if (extra_italic_hight_style)
+		{
+			FcPatternDel(pattern, FC_WEIGHT);
+			FcPatternAddInteger(pattern, FC_WEIGHT, extra_italic_hight_style);
+		}
+	}
+	FcPatternAddInteger(pattern, FC_SLANT, FC_SLANT_ROMAN);
 	if (xloadfont(&dc.ifont, pattern))
 		die("can't open font %s\n", fontstr);
-
 	FcPatternDel(pattern, FC_WEIGHT);
 	FcPatternAddInteger(pattern, FC_WEIGHT, FC_WEIGHT_BOLD);
 	if (xloadfont(&dc.ibfont, pattern))
