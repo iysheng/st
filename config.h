@@ -10,10 +10,10 @@ static char *font = "CascadiaCode:size=12:antialias=true:autohint=true";
 static char *font = "Iosevka SS08:size=12:antialias=true:autohint=true";
 static char *font = "JetBrainsMono Nerd Font:size=12:antialias=true:autohint=true";
 #else
-static char *font = "OperatorMono Nerd Font,Operator Mono Book:style=Book,Regular:size=12:antialias=true:autohint=true";
+static char *font = "Gintronic Nerd Font:size=12:antialias=true:autohint=true";
 #endif
 /* extra string for italic style */
-const char *extra_italic_style = "Book Italic";
+const char *extra_italic_style;
 const int extra_italic_hight_style = 53;
 static int borderpx = 2;
 
