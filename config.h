@@ -9,8 +9,9 @@
 static char *font = "CascadiaCode:size=12:antialias=true:autohint=true";
 static char *font = "Iosevka SS08:size=12:antialias=true:autohint=true";
 static char *font = "JetBrainsMono Nerd Font:size=12:antialias=true:autohint=true";
+static char *font = "Gintronic Nerd Font:size=11:antialias=true:autohint=true";
 #else
-static char *font = "Gintronic Nerd Font:size=10:antialias=true:autohint=true";
+static char *font = "Iosevka:size=13:antialias=true:autohint=true";
 #endif
 /* extra string for italic style */
 const char *extra_italic_style;
